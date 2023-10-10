@@ -13,7 +13,6 @@ $ cd unit-test-academy-api
 $ npm install
 
 # Run the application in DEVELOPMENT mode
-# It will start the project AR (with the FrontEnd already done)
 $ npm run start
 
 ------------------------------------------------------------------------
@@ -25,7 +24,6 @@ $ cd unit-test-academy-app
 $ npm install
 
 # Run the application in DEVELOPMENT mode
-# It will start the project AR (with the FrontEnd already done)
 $ ng serve
 
 ```
