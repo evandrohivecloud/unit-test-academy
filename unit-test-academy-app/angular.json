@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "unit-test-academy"
+  "defaultProject": "unit-test-academy",
+  "cli": {
+    "analytics": false
+  }
 }

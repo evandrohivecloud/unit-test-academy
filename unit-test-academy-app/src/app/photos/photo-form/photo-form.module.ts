@@ -9,7 +9,7 @@ import { ImmediateClickModule } from '../../shared/directives/immediate-click/im
 
 @NgModule({
     declarations: [PhotoFormComponent],
-    imports: [ 
+    imports: [
         CommonModule,
         ReactiveFormsModule,
         VMessageModule,

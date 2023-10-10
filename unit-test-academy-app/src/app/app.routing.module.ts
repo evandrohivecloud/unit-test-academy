@@ -14,40 +14,40 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'home'
     },
-    { 
+    {
         path: 'home',
         loadChildren: './home/home.module#HomeModule'
-    },              
-    { 
-        path: 'user/:userName', 
+    },
+    {
+        path: 'user/:userName',
         pathMatch: 'full',
         component: PhotoListComponent,
         resolve: {
             photos: PhotoListResolver
         }
     },
-    { 
-        path: 'p/add', 
+    {
+        path: 'p/add',
         component: PhotoFormComponent,
         canActivate: [AuthGuard]
     },
-    { 
-        path: 'p/:photoId', 
+    {
+        path: 'p/:photoId',
         component: PhotoDetailsComponent,
-    }, 
-    { 
-        path: 'not-found', 
-        component: NotFoundComponent 
-    },     
-    { 
-        path: '**', 
+    },
+    {
+        path: 'not-found',
+        component: NotFoundComponent
+    },
+    {
+        path: '**',
         redirectTo: 'not-found'
-    }  
+    }
 ];
 
 @NgModule({
-    imports: [ 
-        RouterModule.forRoot(routes, { useHash: true } ) 
+    imports: [
+        RouterModule.forRoot(routes, { useHash: true } )
     ],
     exports: [ RouterModule ]
 })

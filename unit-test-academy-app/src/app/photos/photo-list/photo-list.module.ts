@@ -19,10 +19,10 @@ import { RouterModule } from '@angular/router';
         FilterByDescription,
         SearchComponent
     ],
-    imports: [ 
+    imports: [
         CommonModule,
         PhotoModule,
-        CardModule, 
+        CardModule,
         DarkenOnHoverModule,
         RouterModule
     ]

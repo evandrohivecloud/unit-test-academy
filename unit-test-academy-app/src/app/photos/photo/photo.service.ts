@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Photo } from "./photo";
+import { Photo } from './photo';
 import { PhotoComment } from './photo-comment';
 
 import { environment } from '../../../environments/environment';
@@ -17,7 +17,7 @@ export class PhotoService {
 
     listFromUser(userName: string) {
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos');       
+            .get<Photo[]>(API + '/' + userName + '/photos');
     }
 
     listFromUserPaginated(userName: string, page: number) {
@@ -25,11 +25,11 @@ export class PhotoService {
             .append('page', page.toString());
 
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos', { params });       
-    } 
-    
+            .get<Photo[]>(API + '/' + userName + '/photos', { params });
+    }
+
     upload(description: string, allowComments: boolean, file: File) {
-        
+
         const formData = new FormData();
         formData.append('description', description);
         formData.append('allowComments', allowComments ? 'true' : 'false');
@@ -55,7 +55,7 @@ export class PhotoService {
         return this.http.post(
             API + '/photos/' + photoId + '/comments',
             { commentText }
-        );        
+        );
     }
 
     removePhoto(photoId: number) {

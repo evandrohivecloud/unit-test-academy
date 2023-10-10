@@ -41,7 +41,7 @@ export class PhotoFormComponent implements OnInit {
         this.alertService.success('Upload complete', true);
         this.router.navigate(['/user', this.userService.getUserName()]);
       });
-        
+
   }
 
   handleFile(file: File) {
